@@ -5,6 +5,10 @@ from background import keep_alive
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, CallbackContext
 
+# Получение переменных окружения
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+HUGGING_FACE_API_KEY = os.environ.get('HUGGING_FACE_API_KEY')
+MODEL_URL = os.environ.get('https://api-inference.huggingface.co/models/mistralai/Mistral-Nemo-Instruct-2407') 
 
 
 async def generate_joke():
